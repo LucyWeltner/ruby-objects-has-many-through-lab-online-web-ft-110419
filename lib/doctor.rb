@@ -11,7 +11,7 @@ class Doctor
   end
   
   def appointments 
-    Appointment.all.map{|appt| appt.doctor == self}
+    Appointment.all.find_all{|appt| appt.doctor == self}
   end
   
   def patients 

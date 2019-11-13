@@ -3,6 +3,7 @@ class Genre
   @@all_genres = []
   def initialize(name)
     @name = name 
+    @genre = 
     @@all_genres << self 
   end 
   

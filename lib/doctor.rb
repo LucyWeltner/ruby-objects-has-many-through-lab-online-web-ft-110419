@@ -11,7 +11,8 @@ class Doctor
   end
   
   def appointments 
-    Appointment.all.select{|appt| appt.doctor == self}
+    appt_array = Appointment.all.select{|appt| appt.doctor == self}
+    appt_array.flatten
   end
   
   def patients 

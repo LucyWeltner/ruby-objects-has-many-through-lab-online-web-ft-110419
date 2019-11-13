@@ -7,6 +7,10 @@ class Patient
     @@all_patients << self 
   end 
   
-  def make_appt(date, doctor)
-    Appointment.new()
+  def make_appt(doctor, date)
+    Appointment.new(doctor, self, date)
+  end 
+  
+  def my_appts
+    Appoitment.all.select 
 end 

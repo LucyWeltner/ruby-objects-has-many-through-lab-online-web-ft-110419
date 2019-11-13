@@ -7,11 +7,19 @@ class Patient
     @@all_patients << self 
   end 
   
-  def make_appt(doctor, date)
+  def new_appointment(doctor, date)
     Appointment.new(doctor, self, date)
   end 
   
-  def my_appts
+  def appointments
     Appoitment.all.select{|appt| appt.patient == self}
   end 
+  
+  def doctors 
+    appointments.map{|appt| appt.doctor}
+  end
+  
+  def self.all 
+    @@all_patients 
+  end
 end 

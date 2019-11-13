@@ -8,3 +8,8 @@ class Appointment
     @date = date 
     @all_appts << self 
   end 
+  
+  def self.all 
+    @@all_appts 
+  end 
+end

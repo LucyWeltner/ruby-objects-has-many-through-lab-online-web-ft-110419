@@ -11,8 +11,7 @@ class Doctor
   end
   
   def appointments 
-    appt_array = Appointment.all.select{|appt| appt.doctor == self}
-    appt_array.flatten
+    Appointment.all.map{|appt| appt.doctor == self}
   end
   
   def patients 

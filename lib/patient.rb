@@ -12,5 +12,6 @@ class Patient
   end 
   
   def my_appts
-    Appoitment.all.select 
+    Appoitment.all.select{|appt| appt.patient == self}
+  end 
 end 

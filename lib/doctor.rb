@@ -14,8 +14,6 @@ class Doctor
   
   def appointments 
     Appointment.all.find_all{|appt| appt.doctor == self}
-    binding.pry
-    p Appointment.all.find_all{|appt| appt.doctor == self}.class
   end
   
   def patients 
